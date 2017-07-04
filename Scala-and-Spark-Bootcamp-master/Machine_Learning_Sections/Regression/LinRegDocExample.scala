@@ -6,7 +6,7 @@ def main(): Unit = {
   val spark = SparkSession.builder().appName("LinearRegressionExample").getOrCreate()
 
   // May need to replace with full file path starting with file:///.
-  val path = "sample_linear_regression_data.txt"
+  val path = "Machine_Learning_Sections/Regression/sample_linear_regression_data.txt"
 
   // Training Data
   val training = spark.read.format("libsvm").load(path)
