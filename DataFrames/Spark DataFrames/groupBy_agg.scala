@@ -13,4 +13,4 @@ df.select(sum("Sales")).show()
 df.select(countDistinct("Sales")).show()
 df.select(collect_set("Sales")).show()
 
-df.orderBy("Person").show()
+df.orderBy("Person","Sales").show()

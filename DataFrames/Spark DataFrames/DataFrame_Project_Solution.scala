@@ -56,4 +56,5 @@ yearavgs.select($"Year",$"max(High)").show()
 // What is the average Close for each Calender Month?
 val monthdf = df.withColumn("Month",month(df("Date")))
 val monthavgs = monthdf.select($"Month",$"Close").groupBy("Month").mean()
+monthavgs.show()
 monthavgs.select($"Month",$"avg(Close)").show()
