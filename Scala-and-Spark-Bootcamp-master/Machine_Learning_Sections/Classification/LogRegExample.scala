@@ -17,7 +17,7 @@ Logger.getLogger("org").setLevel(Level.ERROR)
 val spark = SparkSession.builder().getOrCreate()
 
 // Use Spark to read in the Titanic csv file.
-val data = spark.read.option("header","true").option("inferSchema","true").format("csv").load("titanic.csv")
+val data = spark.read.option("header","true").option("inferSchema","true").format("csv").load("Machine_Learning_Sections/Classification/titanic.csv")
 
 // Print the Schema of the DataFrame
 data.printSchema()
