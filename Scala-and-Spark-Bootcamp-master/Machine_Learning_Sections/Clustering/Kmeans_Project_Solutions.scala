@@ -36,7 +36,7 @@ val spark = SparkSession.builder().getOrCreate()
 import org.apache.spark.ml.clustering.KMeans
 
 // Load the Wholesale Customers Data
-val dataset = spark.read.option("header","true").option("inferSchema","true").csv("Wholesale customers data.csv")
+val dataset = spark.read.option("header","true").option("inferSchema","true").csv("Machine_Learning_Sections/Clustering/Wholesale customers data.csv")
 
 // Select the following columns for the training set:
 // Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen

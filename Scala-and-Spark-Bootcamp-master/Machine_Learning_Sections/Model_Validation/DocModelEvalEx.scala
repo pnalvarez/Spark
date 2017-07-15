@@ -3,7 +3,7 @@ import org.apache.spark.ml.regression.LinearRegression
 import org.apache.spark.ml.tuning.{ParamGridBuilder, TrainValidationSplit}
 
 // Prepare training and test data.
-val data = spark.read.format("libsvm").load("sample_linear_regression_data.txt")
+val data = spark.read.format("libsvm").load("Model_Validation/sample_linear_regression_data.txt")
 val Array(training, test) = data.randomSplit(Array(0.9, 0.1), seed = 12345)
 //data.printSchema()
 val lr = new LinearRegression()

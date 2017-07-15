@@ -37,7 +37,7 @@ Logger.getLogger("org").setLevel(Level.ERROR)
 val spark = SparkSession.builder().getOrCreate()
 
 // Use Spark to read in the Advertising csv file.
-val data = spark.read.option("header","true").option("inferSchema","true").format("csv").load("advertising.csv")
+val data = spark.read.option("header","true").option("inferSchema","true").format("csv").load("Machine_Learning_Sections/Classification/advertising.csv")
 
 // Print the Schema of the DataFrame
 data.printSchema()
